@@ -85,3 +85,58 @@ if (!localStorage.getItem('nom')){
 myButton.addEventListener('click',function(){
     setUserName();
 })
+
+
+/**
+ * 
+ */
+const btn = document.querySelector('.btnMachine');
+const txt = document.querySelector('.pMachine');
+
+btn.addEventListener('click', updateBtn);
+
+function updateBtn() {
+  if (btn.textContent === 'Démarrer la machine') {
+    btn.textContent = 'Arrêter la machine';
+    txt.textContent = 'La machine est en marche!';
+  } else {
+    btn.textContent = 'Démarrer la machine';
+    txt.textContent = 'La machine est arrêtée.';
+  }
+}
+
+/**
+ * 
+ */
+
+let num1 = 2;
+let num2 = 6;
+let num3 = 9;
+let num4 = 3;
+let addNum1Num2 = num1 + num2;
+let souNum3Num4 = num3 - num4;
+
+let finalResult;
+finalResult = addNum1Num2 * souNum3Num4;
+
+
+ 
+let evenOddResult;
+
+// Add your code here
+
+
+
+// Don't edit the code below here!
+
+const section = document.querySelector('section');
+
+const para1 = document.createElement('p');
+const finalResultCheck = finalResult === 48 ? `Yes, well done!` : `No, it is ${ finalResult }`;
+para1.textContent = `Is the finalResult 48? ${ finalResultCheck }`;
+const para2 = document.createElement('p');
+const evenOddResultCheck = evenOddResult === 0 ? 'The final result is even!' : 'The final result is odd. Hrm.';
+para2.textContent = evenOddResultCheck;
+
+section.appendChild(para1);
+section.appendChild(para2);
